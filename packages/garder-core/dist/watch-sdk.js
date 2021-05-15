@@ -1,0 +1,1 @@
+!function(e,t){"object"==typeof exports&&"object"==typeof module?module.exports=t():"function"==typeof define&&define.amd?define([],t):"object"==typeof exports?exports.Watch=t():e.Watch=t()}(this,(function(){return console.log("init test"),{}}));

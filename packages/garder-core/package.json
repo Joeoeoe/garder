@@ -1,0 +1,34 @@
+{
+  "name": "garder-core",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "fix": "npx eslint ./ --fix --ext .js,.ts",
+    "format": "npx prettier --write .",
+    "dev": "tsc --watch",
+    "build:lib": "tsc",
+    "build:dist": "webpack --config webpack.dist.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.22.0",
+    "eslint": "^7.24.0",
+    "eslint-config-prettier": "^8.2.0",
+    "eslint-import-resolver-typescript": "^2.4.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.4.0",
+    "prettier": "^2.2.1",
+    "ts-loader": "^9.0.0",
+    "typescript": "^4.2.4",
+    "webpack": "^5.33.2",
+    "webpack-cli": "^4.6.0"
+  },
+  "dependencies": {
+    "dexie": "^3.0.3",
+    "garder-common": "^1.0.0"
+  }
+}
