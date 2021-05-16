@@ -32,7 +32,7 @@ const xhrAndFetchErrorMount = function (plugin, store) {
             return res;
         })
             .catch((error) => {
-            plugin.onError({ message: error }, error, store);
+            plugin.onError({ message: String(error) }, error, store);
             throw error;
         });
     };

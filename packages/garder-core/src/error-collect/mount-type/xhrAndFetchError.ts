@@ -38,7 +38,7 @@ export const xhrAndFetchErrorMount = function (plugin: IPlugin_XHR_AND_FETCH_ERR
         return res;
       })
       .catch((error) => {
-        plugin.onError({ message: error }, error, store);
+        plugin.onError({ message: String(error) }, error, store);
         throw error;
       });
   };
