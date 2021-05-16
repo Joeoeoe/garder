@@ -14,3 +14,10 @@ export interface IStoreError {
   [ERROR_FIELD.COL]: number | null;
   [ERROR_FIELD.ROW]: number | null;
 }
+
+export interface IAddError {
+  [ERROR_FIELD.MESSAGE]: string;
+  [ERROR_FIELD.STACK]: string;
+  [ERROR_FIELD.COL]: number | null;
+  [ERROR_FIELD.ROW]: number | null;
+}

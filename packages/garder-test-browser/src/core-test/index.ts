@@ -13,7 +13,6 @@ const jsErrorPlugin: IPlugin_JS_ERROR = {
     await store.addError({
       stack: error.message,
       message: error.message,
-      timestamp: new Date().getTime(),
       col: 0,
       row: 0,
     });
@@ -26,7 +25,6 @@ const sourceErrorPlugin: IPlugin_SOURCE_ERROR = {
     await store.addError({
       stack: error.message,
       message: error.message,
-      timestamp: new Date().getTime(),
       col: 0,
       row: 0,
     });
@@ -41,7 +39,6 @@ const promiseErrorPlugin: IPlugin_PROMISE_ERROR = {
     await store.addError({
       stack: error.message,
       message: error.message,
-      timestamp: new Date().getTime(),
       col: 0,
       row: 0,
     });
@@ -55,7 +52,6 @@ const xhrErrorPlugin: IPlugin_XHR_AND_FETCH_ERROR = {
     await store.addError({
       stack: message,
       message: message,
-      timestamp: new Date().getTime(),
       col: 0,
       row: 0,
     });

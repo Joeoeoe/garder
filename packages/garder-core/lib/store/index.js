@@ -44,7 +44,7 @@ class Store {
             const pk = yield this.db[types_1.TABLE.ERROR].add({
                 [garder_common_1.ERROR_FIELD.STACK]: error.stack,
                 [garder_common_1.ERROR_FIELD.MESSAGE]: error.message,
-                [garder_common_1.ERROR_FIELD.TIMESTAMP]: error.timestamp,
+                [garder_common_1.ERROR_FIELD.TIMESTAMP]: new Date().getTime(),
                 [garder_common_1.ERROR_FIELD.ROW]: error.row,
                 [garder_common_1.ERROR_FIELD.COL]: error.col,
             });

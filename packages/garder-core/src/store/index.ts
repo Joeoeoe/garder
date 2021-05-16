@@ -7,7 +7,7 @@
 import Dexie, { Table } from 'dexie';
 import { ERROR_FIELD } from 'garder-common';
 import { report } from '../reporter';
-import { IStoreError, TABLE } from '../types';
+import { IAddError, IStoreError, TABLE } from '../types';
 
 class Store {
   dbName: string;
@@ -32,11 +32,11 @@ class Store {
     this.errorMaxCount = 10;
   }
 
-  async addError(error: IStoreError): Promise<number> {
+  async addError(error: IAddError): Promise<number> {
     const pk: number = await this.db[TABLE.ERROR].add({
       [ERROR_FIELD.STACK]: error.stack,
       [ERROR_FIELD.MESSAGE]: error.message,
-      [ERROR_FIELD.TIMESTAMP]: error.timestamp,
+      [ERROR_FIELD.TIMESTAMP]: new Date().getTime(),
       [ERROR_FIELD.ROW]: error.row,
       [ERROR_FIELD.COL]: error.col,
     });

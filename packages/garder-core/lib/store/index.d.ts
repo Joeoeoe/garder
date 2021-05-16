@@ -5,13 +5,13 @@
  * 存储空间：考虑后续rrweb，故将所有记录存在indexedDB中
  */
 import Dexie from 'dexie';
-import { IStoreError } from '../types';
+import { IAddError, IStoreError } from '../types';
 declare class Store {
     dbName: string;
     db: Dexie;
     errorMaxCount: number;
     constructor(dbName: string);
-    addError(error: IStoreError): Promise<number>;
+    addError(error: IAddError): Promise<number>;
     getErrorList(): Promise<Array<IStoreError>>;
     private clearErrorTable;
 }
